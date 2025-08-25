@@ -1,3 +1,11 @@
 [2025-08-19T03:47:34.354Z] [ERROR] GET /products Unknown column 'p.ids' in 'field list'
 [2025-08-19T03:48:23.595Z] [ERROR] GET /products Unknown column 'p.ids' in 'field list'
 [2025-08-19T03:51:31.125Z] [ERROR] POST /categories category_name is not defined
+[2025-08-20T03:37:31.685Z] [ERROR] GET /categories Unknown column 'createdAt' in 'field list'
+[2025-08-20T03:38:29.447Z] [ERROR] GET /categories Unknown column 'createdAt' in 'field list'
+[2025-08-25T04:14:33.393Z] [ERROR] GET /customers/1 Cannot convert object to primitive value
+[2025-08-25T04:15:18.053Z] [ERROR] GET /customers/1 Cannot convert object to primitive value
+[2025-08-25T04:16:25.485Z] [ERROR] GET /customers/1 Cannot convert object to primitive value
+[2025-08-25T04:16:51.493Z] [ERROR] GET /customers/1 Cannot convert object to primitive value
+[2025-08-25T04:48:40.608Z] [ERROR] POST /customers validateRequired is not defined
+[2025-08-25T04:52:30.784Z] [ERROR] POST /customers requiredFields.forEach is not a function
