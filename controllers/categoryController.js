@@ -1,10 +1,12 @@
 const { validateRequired } = require('../helpers/validator');
-const Category = require('../models/category');
+const { Category, Product } = require('../models');
 
 // Mendapatkan semua kategori
 const getCategories = async (req, res, next) => {
   try {
-    const categories = await Category.findAll(); // Sequelize akan menangani query
+    const categories = await Category.findAll({
+      include: [{ model: Product }] // Join dengan Product
+    }); // Sequelize akan menangani query
     res.json(categories);
   } catch (err) {
     next(err); // Error handling jika terjadi kesalahan
@@ -78,7 +80,7 @@ const updateCategory = async (req, res, next) => {
     const updatedCategory = await category.update({ category_name });
 
     // Kirimkan response dengan data kategori yang telah diperbarui
-    res.status(200).json({success:true, message:"Berhasil menambah data", data:newCategory });
+    res.status(200).json({success:true, message:"Berhasil memperbaharui data" });
   } catch (err) {
     next(err); // Kirimkan error ke middleware error handler
   }
